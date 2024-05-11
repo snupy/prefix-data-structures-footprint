@@ -6,7 +6,7 @@ public class TriePrefixSearchArrayBased implements PrefixSearch {
 
   static class Node {
     Object value = null;
-    Node[] nodes = new Node[26]; // array size equal to alphabet size
+    Node[] nodes; // array size equal to alphabet size
 
     void add(char[] word) {
       add(word, 0);
@@ -18,6 +18,9 @@ public class TriePrefixSearchArrayBased implements PrefixSearch {
       }
       char c = word[index];
       int arrayIndex = c - 'a';
+      if (nodes == null) {
+        nodes = new Node[26];
+      }
       var node = nodes[arrayIndex];
       if (node == null) {
         node = new Node();

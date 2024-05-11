@@ -37,10 +37,10 @@ prefixdatastructure.TriePrefixSearch@51005c05d footprint:
    4187775           182009280   (total)
 
 
-prefixdatastructure.TriePrefixSearchArrayBased@13e68fd6d footprint:
+prefixdatastructure.TriePrefixSearchArrayBased@6cd8737d footprint:
      COUNT       AVG       SUM   DESCRIPTION
-   1126004       120 135120480   [Lprefixdatastructure.TriePrefixSearchArrayBased$Node;
+    809737       120  97168440   [Lprefixdatastructure.TriePrefixSearchArrayBased$Node;
          1        16        16   prefixdatastructure.TriePrefixSearchArrayBased
    1126004        24  27024096   prefixdatastructure.TriePrefixSearchArrayBased$Node
-   2252009           162144592   (total)
+   1935742           124192552   (total)
 ```
