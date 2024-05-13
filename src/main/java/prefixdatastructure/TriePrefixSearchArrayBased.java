@@ -4,11 +4,14 @@ import java.util.Collection;
 
 public class TriePrefixSearchArrayBased implements PrefixSearch {
 
-  static class Node {
+  class Node {
     Object value = null;
-    Node[] nodes; // array size equal to alphabet size
+    Node[] nodes;
 
     void add(char[] word) {
+      if (word.length == 0) {
+        return;
+      }
       add(word, 0);
     }
 
@@ -19,12 +22,13 @@ public class TriePrefixSearchArrayBased implements PrefixSearch {
       char c = word[index];
       int arrayIndex = c - 'a';
       if (nodes == null) {
-        nodes = new Node[26];
+        nodes = new Node[26]; // array size equal to alphabet size
       }
       var node = nodes[arrayIndex];
       if (node == null) {
         node = new Node();
         nodes[arrayIndex] = node;
+        TriePrefixSearchArrayBased.this.size++;
       }
       node.add(word, index + 1);
     }
@@ -32,8 +36,15 @@ public class TriePrefixSearchArrayBased implements PrefixSearch {
 
   private final Node root = new Node();
 
+  private long size;
+
   @Override
   public void init(Collection<String> words) {
     words.forEach(word -> root.add(word.toCharArray()));
+  }
+
+  @Override
+  public long size() {
+    return size;
   }
 }

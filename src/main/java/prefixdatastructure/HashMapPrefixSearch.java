@@ -13,6 +13,11 @@ public class HashMapPrefixSearch implements PrefixSearch {
     words.forEach(this::addWord);
   }
 
+  @Override
+  public long size() {
+    return map.size();
+  }
+
   private void addWord(String word) {
     for (int i = 1; i <= word.length(); i++) {
       // add all prefixes

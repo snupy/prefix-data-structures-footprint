@@ -4,9 +4,11 @@ What data structure would you for the prefix search?
 
 There are several options. This repo tries to compare footprint of each implementation.
 
-It uses a dictionary of 426k English words in lower case.
+It uses a dictionary of `426k` English words in lower case.
 
-Data structure need to initialize only keys. Values are not in the scope
+Data structure needs to initialize only keys. Values are not in the scope.
+
+There are `1126003` prefixes or `31493624` bytes in Seven-bit `ASCII`, also known as `ISO646-US`.
 
 ## How to run
 
@@ -15,7 +17,7 @@ Data structure need to initialize only keys. Values are not in the scope
 ## Current results
 
 ```
-prefixdatastructure.HashMapPrefixSearch@5e5f8e77d footprint:
+prefixdatastructure.HashMapPrefixSearch footprint:
      COUNT       AVG       SUM   DESCRIPTION
    1126003        27  31493624   [B
          1   8388624   8388624   [Ljava.util.HashMap$Node;
@@ -26,21 +28,32 @@ prefixdatastructure.HashMapPrefixSearch@5e5f8e77d footprint:
    3378012           102938480   (total)
 
 
-prefixdatastructure.TriePrefixSearch@51005c05d footprint:
+prefixdatastructure.HashMapPrefixSearchWithCustomKeyType footprint:
+     COUNT       AVG       SUM   DESCRIPTION
+   1126003        27  31493624   [B
+         1   8388624   8388624   [Ljava.util.HashMap$Node;
+         1        48        48   java.util.HashMap
+   1126003        32  36032096   java.util.HashMap$Node
+         1        16        16   prefixdatastructure.HashMapPrefixSearchWithCustomKeyType
+   1126003        16  18016048   prefixdatastructure.HashMapPrefixSearchWithCustomKeyType$BytesKey
+   3378012            93930456   (total)
+
+
+prefixdatastructure.TriePrefixSearch footprint:
      COUNT       AVG       SUM   DESCRIPTION
     809737        80  64904464   [Ljava.util.HashMap$Node;
         26        16       416   java.lang.Character
    1126004        48  54048192   java.util.HashMap
    1126003        32  36032096   java.util.HashMap$Node
-         1        16        16   prefixdatastructure.TriePrefixSearch
+         1        24        24   prefixdatastructure.TriePrefixSearch
    1126004        24  27024096   prefixdatastructure.TriePrefixSearch$Node
-   4187775           182009280   (total)
+   4187775           182009288   (total)
 
 
-prefixdatastructure.TriePrefixSearchArrayBased@6cd8737d footprint:
+prefixdatastructure.TriePrefixSearchArrayBased footprint:
      COUNT       AVG       SUM   DESCRIPTION
     809737       120  97168440   [Lprefixdatastructure.TriePrefixSearchArrayBased$Node;
-         1        16        16   prefixdatastructure.TriePrefixSearchArrayBased
+         1        24        24   prefixdatastructure.TriePrefixSearchArrayBased
    1126004        24  27024096   prefixdatastructure.TriePrefixSearchArrayBased$Node
-   1935742           124192552   (total)
+   1935742           124192560   (total)
 ```
