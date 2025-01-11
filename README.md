@@ -17,7 +17,7 @@ There are `1126003` prefixes or `31493624` bytes in Seven-bit `ASCII`, also know
 ## Current results
 
 ```
-prefixdatastructure.HashMapPrefixSearch footprint:
+prefixdatastructure.HashMapPrefixSearch@3d45cd75d footprint:
      COUNT       AVG       SUM   DESCRIPTION
    1126003        27  31493624   [B
          1   8388624   8388624   [Ljava.util.HashMap$Node;
@@ -28,7 +28,7 @@ prefixdatastructure.HashMapPrefixSearch footprint:
    3378012           102938480   (total)
 
 
-prefixdatastructure.HashMapPrefixSearchWithCustomKeyType footprint:
+prefixdatastructure.HashMapPrefixSearchWithCustomKeyType@7e885babd footprint:
      COUNT       AVG       SUM   DESCRIPTION
    1126003        27  31493624   [B
          1   8388624   8388624   [Ljava.util.HashMap$Node;
@@ -39,7 +39,7 @@ prefixdatastructure.HashMapPrefixSearchWithCustomKeyType footprint:
    3378012            93930456   (total)
 
 
-prefixdatastructure.TriePrefixSearch footprint:
+prefixdatastructure.TriePrefixSearch@24af3add footprint:
      COUNT       AVG       SUM   DESCRIPTION
     809737        80  64904464   [Ljava.util.HashMap$Node;
         26        16       416   java.lang.Character
@@ -50,10 +50,18 @@ prefixdatastructure.TriePrefixSearch footprint:
    4187775           182009288   (total)
 
 
-prefixdatastructure.TriePrefixSearchArrayBased footprint:
+prefixdatastructure.TriePrefixSearchArrayBased@895be6dd footprint:
      COUNT       AVG       SUM   DESCRIPTION
     809737       120  97168440   [Lprefixdatastructure.TriePrefixSearchArrayBased$Node;
          1        24        24   prefixdatastructure.TriePrefixSearchArrayBased
    1126004        24  27024096   prefixdatastructure.TriePrefixSearchArrayBased$Node
    1935742           124192560   (total)
+
+
+prefixdatastructure.TriePrefixSearchArrayBasedCompact@3f856cc7d footprint:
+     COUNT       AVG       SUM   DESCRIPTION
+    809737        24  20233544   [Lprefixdatastructure.TriePrefixSearchArrayBasedCompact$Node;
+         1        24        24   prefixdatastructure.TriePrefixSearchArrayBasedCompact
+   1126004        32  36032128   prefixdatastructure.TriePrefixSearchArrayBasedCompact$Node
+   1935742            56265696   (total)
 ```

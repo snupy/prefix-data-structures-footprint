@@ -18,7 +18,8 @@ public class Main {
             new HashMapPrefixSearch(),
             new HashMapPrefixSearchWithCustomKeyType(),
             new TriePrefixSearch(),
-            new TriePrefixSearchArrayBased());
+            new TriePrefixSearchArrayBased(),
+            new TriePrefixSearchArrayBasedCompact());
     implementations.forEach(
         imp -> {
           imp.init(words);
